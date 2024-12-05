@@ -32,16 +32,16 @@ class KotlinSkeleton(
     private val log = Log(true)
 
     enum class BotState {
-        //define your bot states here
         IDLE,
-        SKILLING,
         AFK_SIMULATION,
         CHECKING_POS,
         DEFAULT_COOKING,
         MOVING_TO_COOKING,
-        //etc..
     }
 
+    /**
+     * Not implemented yet
+     */
     enum class BotMode {
         SUICIDE_BOT,
         SEMI_AFK,
@@ -73,13 +73,13 @@ class KotlinSkeleton(
             }
 
             BotState.IDLE -> {
-                println("We're idle! how the fuck did you get here")
+                log.error("We're idle! not implemented")
                 Execution.delay(random.nextLong(1500,5000))
                 return
             }
 
             BotState.AFK_SIMULATION -> {
-                println("We're afk! how the fuck did you get here")
+                log.error("We're afk! not implemented")
                 Execution.delay(random.nextLong(1500,5000))
                 return
             }
@@ -89,7 +89,6 @@ class KotlinSkeleton(
                 Execution.delay(random.nextLong(1500,5000))
                 return
             }
-            BotState.SKILLING -> TODO()
         }
 
     }
