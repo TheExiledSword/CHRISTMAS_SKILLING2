@@ -138,7 +138,7 @@ class KotlinSkeleton(
                 if (teleportButton != null) {
                     log.success("Interacted with teleportButton: ${teleportButton.interact("Select")}")
                     Execution.delay(random.nextLong(5000, 8000))
-                    if (player.distanceTo(Coordinate(5216, 9787, 0)) > 20) {
+                    if (player.distanceTo(Coordinate(5216, 9787, 0)) < 20) {
                         log.success("inside christmas event area")
                         botState = BotState.MOVING_TO_COOKING
                         sceneObjectCauldron = SceneObjectQuery.newQuery().ids(131826).results().firstOrNull()
